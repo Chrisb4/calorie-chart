@@ -1,0 +1,28 @@
+<% include header %>
+
+  <h1><%-title %></h1>
+  <p>Welcome to <%- title %></p>
+
+  <div class="main">
+    <div class="form">
+      <form action="/api" method="post">
+        <div>
+          <label for="food">Food</label>
+          <input type="text" name="food">
+        </div>
+        <div>
+          <label for="meal">Meal</label>
+          <input type="text" name="meal">
+        </div>
+        <div>
+          <label for="calories">Calories</label>
+          <input type="text" name="calories">
+        </div>
+        <button type="submit">post it!</button>
+      </form>
+    </div>
+            <button type="submit">post it!</button>
+
+  </div>
+
+<% include footer %>

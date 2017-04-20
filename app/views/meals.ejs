@@ -1,0 +1,29 @@
+<% include header %>
+
+  <h1><%-title %></h1>
+  <p>Welcome to <%- title %></p>
+
+
+  <div>
+    <h1>Motherfucking Meals?</h1>
+    <div>
+      <%- meals %>
+    </div>
+  </div>
+
+<% for(var i=4; i<meals.length; i++) {%>
+<div class="list">
+  <ul>
+    <li><%= meals[i].meal %></li>
+   <li><%= meals[i].food %></li>
+   <li><%= meals[i].calories %></li>
+  </ul>
+</div>
+   
+<% } %>
+
+<div class="total"> 
+  <h2><%- calories %></h2>
+</div>
+
+<% include footer %>
