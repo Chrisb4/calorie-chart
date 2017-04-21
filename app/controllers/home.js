@@ -41,7 +41,7 @@ router.get('/calories', function(req, res, next) {
 })
 
 router.get('/api', function(req, res, next) {
-  res.render('index', {
+  res.render('api', {
     title: 'API page rendered'
   });
 });
