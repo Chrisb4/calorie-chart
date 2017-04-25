@@ -11,6 +11,9 @@ ul {
   list-style: none;
   border: 3px solid black; }
 
+.counterMain {
+  color: #fff; }
+
 .headerNav {
   top: 0;
   display: flex;
