@@ -1,39 +1,41 @@
 <% include header %>
-<div class="counter">
-  <div class="headerNav">
-    <div class="logo">
-      <h1>Cal Tracker</h1>
+  <div class="counter">
+    <div class="header-nav">
+      <div class="logo">
+        <h1>Cal Tracker</h1>
+      </div>
+      <div class="header-links">
+        <h2>Calorie Chart</h2>
+      </div>
     </div>
-    <div class="headerLinks">
-      <h2>Calorie Chart</h2>
-    </div>
-  </div>
-  <div class="counterMain">
-  <h1>Api ejs</h1>
-  <h1><%-title %></h1>
-  <p>Welcome to <%- title %></p>
+    <div class="counter-main">
+      <h1>Api ejs</h1>
+      <h1><%-title %></h1>
+      <p>Welcome to
+        <%- title %>
+      </p>
 
-  <div class="main">
-    <div class="form">
-      <form action="/api" method="post">
-        <div>
-          <label for="food">Food</label>
-          <input type="text" name="food">
-        </div>
-        <div>
-          <label for="meal">Meal</label>
-          <input type="text" name="meal">
-        </div>
-        <div>
-          <label for="calories">Calories</label>
-          <input type="text" name="calories">
+      <div class="form-wrapper">
+        <div class="form">
+          <form action="/api" method="post">
+            <div class="form-group">
+              <label for="food">Food</label>
+              <input type="text" name="food">
+            </div>
+            <div class="form-group">
+              <label for="meal">Meal</label>
+              <input type="text" name="meal">
+            </div>
+            <div class="form-group">
+              <label for="calories">Calories</label>
+              <input type="text" name="calories">
+            </div>
+            <button type="submit">post it!</button>
+          </form>
         </div>
         <button type="submit">post it!</button>
-      </form>
-    </div>
-            <button type="submit">post it!</button>
 
+      </div>
+    </div>
   </div>
-</div>
-</div>
-<% include footer %>
+  <% include footer %>
