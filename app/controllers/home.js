@@ -18,7 +18,7 @@ router.get('/', function (req, res, next) {
   });
 });
 router.get('/test', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
+    res.json({ message: 'hooray! welcome to our api!' });
 });
 router.get('/calories', function(req, res, next) {
   Meal.find(function (err, meals) {
@@ -46,7 +46,7 @@ router.get('/api', function(req, res, next) {
   });
 });
 
-router.post('/api', function(req, res) {
+router.post('/api', function(req, res, next) {
   var meal = new Meal();
   meal.meal = req.body.meal;
   meal.food = req.body.food;
@@ -55,6 +55,6 @@ router.post('/api', function(req, res) {
   meal.save(function (err, meal) {
     if (err) return next(err);
     res.json(meal)
-    console.log('success')
+    console.log('success');
   })
 })

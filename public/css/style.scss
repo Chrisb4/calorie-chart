@@ -47,10 +47,32 @@ ul {
 }
 
 .form-wrapper {
-
+  // width: 400px;
 }
-
-
+.form{
+  // width: 400px;
+}
+.form-group {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  input {
+    width: 50%;
+    background: transparent;
+    border-color: transparent;
+    border-bottom-color: #fff;
+    color: #fff;
+  }
+}
+input:focus {
+  border-bottom-color: red;
+}
+button {
+  background-color: #fff;
+  border-color: rgb(181, 207,	234);
+  padding: 4px 8px 5px;
+  border-radius: 3px;
+}
 
 
 
