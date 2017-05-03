@@ -6,18 +6,26 @@ $secondary-font: 'Rubik Mono One', sans-serif;
 //element styles
 body {
   margin: 0 auto;
-  background-size: cover;
-  background-image: url('../img/blueberries.jpg');
+  // background-size: cover;
+  // background-image: url('../img/blueberries.jpg');
   font-family: $primary-font;
 
 }
-
 a {
   color: #00B7FF;
 }
 ul {
  list-style: none;
  border: 3px solid black;
+}
+button {
+  background-color: #fff;
+  border-color: rgb(181, 207,	234);
+  padding: 4px 8px 5px;
+  border-radius: 12px;
+}
+input:focus {
+  border-bottom-color: red;
 }
 // Nav bar styles
 .header-nav {
@@ -64,16 +72,27 @@ ul {
     color: #fff;
   }
 }
-input:focus {
-  border-bottom-color: red;
-}
-button {
-  background-color: #fff;
-  border-color: rgb(181, 207,	234);
-  padding: 4px 8px 5px;
-  border-radius: 3px;
+
+
+// Style for calorie display
+.calorie-display {
+  display: flex;
 }
 
+.day {
+  min-width: 300px;
+  border: 1px solid #d11d05;
+}
+.day-row {
+  display: flex;
+  justify-content: space-between;
+}
+.meal {
+  padding-left: 20px;
+}
+.meal-items {
+  padding-right: 20px;
+}
 
 
 

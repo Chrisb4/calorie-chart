@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway|Rubik+Mono+One");
 body {
   margin: 0 auto;
-  background-size: cover;
-  background-image: url("../img/blueberries.jpg");
   font-family: "Raleway", sans-serif; }
 
 a {
@@ -11,6 +9,15 @@ a {
 ul {
   list-style: none;
   border: 3px solid black; }
+
+button {
+  background-color: #fff;
+  border-color: #b5cfea;
+  padding: 4px 8px 5px;
+  border-radius: 12px; }
+
+input:focus {
+  border-bottom-color: red; }
 
 .header-nav {
   top: 0;
@@ -43,14 +50,22 @@ ul {
     border-bottom-color: #fff;
     color: #fff; }
 
-input:focus {
-  border-bottom-color: red; }
+.calorie-display {
+  display: flex; }
 
-button {
-  background-color: #fff;
-  border-color: #b5cfea;
-  padding: 4px 8px 5px;
-  border-radius: 3px; }
+.day {
+  min-width: 300px;
+  border: 1px solid #d11d05; }
+
+.day-row {
+  display: flex;
+  justify-content: space-between; }
+
+.meal {
+  padding-left: 20px; }
+
+.meal-items {
+  padding-right: 20px; }
 
 #strike {
   text-decoration: line-through; }
