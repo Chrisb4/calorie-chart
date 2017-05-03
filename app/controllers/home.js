@@ -21,6 +21,7 @@ router.get('/test', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });
 });
 router.get('/calories', function(req, res, next) {
+  // Need to fix -- throws error when their are no meals in the database
   Meal.find(function (err, meals) {
     if (err) return next(err);
     console.log(meals);
@@ -36,9 +37,25 @@ router.get('/calories', function(req, res, next) {
       title: 'Calories route rendering index page',
       meals: meals,
       calories: totalCals
-    })
-  })
-})
+    });
+  });
+});
+// test route to ajax the calories from the db
+router.get('/getcalories', function(req, res, next) {
+  Meal.find(function (err, meals) {
+    if (err) return next(err);
+    console.log(meals);
+      var calArray = [];
+      for (var i = 0; i < meals.length; i++) {
+        if (meals[i].calories != undefined ){
+          calArray.push(meals[i].calories);
+        }
+      }
+      var totalCals = calArray.reduce( (prev, curr) => prev + curr);
+  console.log('this is the total calories ', totalCals);
+    res.json({meals})
+  });
+});
 
 router.get('/api', function(req, res, next) {
   res.render('api', {
